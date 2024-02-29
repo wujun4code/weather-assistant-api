@@ -1,6 +1,6 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and push docker iamge to registry
+name: Build and push docker image to registry@v1
 
 on:
   push:
