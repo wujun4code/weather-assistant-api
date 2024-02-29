@@ -36,4 +36,4 @@ jobs:
         context: "./src"
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/weather-assistant-api:${{ env.branch }}-${{github.run_number}}-${{ env.sha_short }}
-        file: ./src/Dockerfile
+        file: ./Dockerfile
