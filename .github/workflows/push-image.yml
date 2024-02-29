@@ -33,7 +33,7 @@ jobs:
     - name: Build and push image to docker hub
       uses: docker/build-push-action@v5
       with:
-        context: "./src"
+        context: "./src/WeatherAsssistant"
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/weather-assistant-api:${{ env.branch }}-${{github.run_number}}-${{ env.sha_short }}
-        file: ./Dockerfile
+        file: ./src/WeatherAsssistant/Dockerfile
