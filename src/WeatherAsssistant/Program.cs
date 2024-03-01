@@ -15,7 +15,7 @@ namespace WeatherAsssistant
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddAuthentication("CustomScheme").AddScheme<AuthenticationSchemeOptions, CustomAuthenticationHandler>("CustomScheme", options => { });
+            builder.Services.AddKeycloakOAuth2ProxyAuthentication(builder.Configuration);
             builder.Services.AddHttpContextAccessor();
 
             var app = builder.Build();
